@@ -1,6 +1,4 @@
-# SPYNET
-
-# 📊 Tutorial de Instalación - Analizador de Red
+# 📊 Tutorial de Instalación - SPYNET
 
 ## 📋 Requisitos del Sistema
 
