@@ -50,8 +50,8 @@ sudo dnf install python3 python3-pip
 
 ---
 
-## 📦 Paso 2: Instalar Dependencias
-
+## 📦 Paso 2: Instalar Dependencias (Actualizacion de la V3.0)
+**⚠️con la version V3 ya existe un instaldor para las dependencias necesarias, en caso de que el programa no pueda instarlo ralizalo de la  siguiente forma⚠️**
 ### Instalación Automática
 Crea un archivo `requirements.txt` con el siguiente contenido:
 
