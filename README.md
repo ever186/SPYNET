@@ -52,25 +52,11 @@ sudo dnf install python3 python3-pip
 
 ## 📦 Paso 2: Instalar Dependencias (Actualizacion de la V3.0)
 **⚠️con la version V3 ya existe un instaldor para las dependencias necesarias, en caso de que el programa no pueda instarlo realizar los siguientes pasos⚠️**
-### Instalación Automática
-Crea un archivo `requirements.txt` con el siguiente contenido:
-
-```txt
-tkinter
-psutil>=5.8.0
-scapy>=2.4.5
-```
-
-Luego ejecuta:
-```bash
-pip install -r requirements.txt
-```
 
 ### Instalación Manual
 ```bash
 # Dependencias principales
-pip install psutil
-pip install scapy
+pip install scapy psutil matplotlib Pillow
 
 # tkinter viene incluido con Python en la mayoría de sistemas
 ```
