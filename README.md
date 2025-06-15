@@ -1,255 +1,244 @@
-# 📊 Tutorial de Instalación - SPYNET
+# 🕷️ SPYNET V3.0 - Edición Analista
+
+Una herramienta avanzada de análisis de tráfico de red con interfaz gráfica moderna, geolocalización IP y capacidades de monitoreo en tiempo real.
+
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+## 🌟 Características Principales
+
+- **🔍 Análisis de Tráfico en Tiempo Real**: Captura y analiza paquetes de red con detalles completos
+- **🌍 Geolocalización IP**: Identifica la ubicación geográfica de las conexiones (requiere base de datos GeoIP)
+- **🎯 Filtrado Inteligente**: Sistema de filtros en tiempo real para encontrar conexiones específicas
+- **📊 Visualización Gráfica**: Gráficos en tiempo real del tráfico de red
+- **🔧 Instalador Automático**: Instala automáticamente todas las dependencias necesarias
+- **📱 Escáner de Red**: Descubre dispositivos activos en tu red local
+- **💾 Exportación de Datos**: Exporta los resultados a archivos CSV
+- **🔒 Detección de Puertos Inseguros**: Identifica conexiones a puertos potencialmente peligrosos
 
 ## 📋 Requisitos del Sistema
 
-### Sistemas Operativos Compatibles
-- ✅ Windows 10/11
-- ✅ macOS 10.14+
-- ✅ Linux (Ubuntu, Debian, CentOS, etc.)
+- **Python 3.7 o superior**
+- **Permisos de administrador** (necesarios para la captura de paquetes)
+- **Conexión a Internet** (para la instalación automática de dependencias)
 
-### Requisitos de Hardware
-- 🖥️ **RAM**: Mínimo 4GB (Recomendado 8GB)
-- 💾 **Espacio**: 500MB libres
-- 🌐 **Red**: Tarjeta de red activa
-- 👤 **Permisos**: Acceso de administrador/root
+### Dependencias Principales
+El programa instalará automáticamente:
+- `scapy` - Manipulación de paquetes de red
+- `psutil` - Información del sistema
+- `matplotlib` - Generación de gráficos
+- `Pillow (PIL)` - Procesamiento de imágenes
+- `maxminddb` - Base de datos de geolocalización
 
----
+## 🚀 Instalación y Uso
 
-## 🐍 Paso 1: Instalar Python
+### Instalación Rápida
 
-### Windows
-1. Ve a [python.org](https://www.python.org/downloads/)
-2. Descarga Python 3.8 o superior
-3. **IMPORTANTE**: Marca "Add Python to PATH" durante la instalación
-4. Verifica la instalación:
-   ```cmd
-   python --version
-   pip --version
+1. **Clona el repositorio:**
+   ```bash
+   git clone https://github.com/tuusuario/spynet-v3.git
+   cd spynet-v3
    ```
 
-### macOS
-```bash
-# Usando Homebrew (recomendado)
-brew install python3
+2. **Ejecuta el programa:**
+   ```bash
+   # En Windows (como Administrador)
+   python SPYNET_V3.py
+   
+   # En Linux/macOS
+   sudo python3 SPYNET_V3.py
+   ```
 
-# O descarga desde python.org
+3. **El instalador automático se encargará del resto** ✨
+
+### Configuración de GeoIP (Opcional)
+
+Para habilitar la geolocalización de IPs:
+
+1. Crea una carpeta llamada `geoip` en el directorio del programa
+2. Descarga la base de datos GeoLite2-City desde [MaxMind](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data)
+3. Coloca el archivo `GeoLite2-City.mmdb` en la carpeta `geoip/`
+
+### Estructura de Carpetas
+
+```
+spynet-v3/
+├── SPYNET_V3.py           # Archivo principal
+├── icons/                 # Iconos de la interfaz
+│   ├── telarana.png      # Icono principal
+│   ├── start.png         # Icono de inicio
+│   ├── stop.png          # Icono de parar
+│   ├── clear.png         # Icono de limpiar
+│   ├── csv.png           # Icono de CSV
+│   ├── scan.png          # Icono de escáner
+│   └── export.png        # Icono de exportar
+├── geoip/                # Base de datos GeoIP (opcional)
+│   └── GeoLite2-City.mmdb
+└── README.md
 ```
 
-### Linux (Ubuntu/Debian)
-```bash
-sudo apt update
-sudo apt install python3 python3-pip
+## 🎮 Cómo Usar
+
+### 1. Interfaz Principal
+
+La aplicación cuenta con tres pestañas principales:
+
+#### 📊 **Análisis de Tráfico**
+- Muestra conexiones en tiempo real con geolocalización
+- Filtros de búsqueda instantánea
+- Doble clic en cualquier conexión para ver detalles completos del paquete
+- Identificación automática de puertos inseguros (resaltados en rojo)
+
+#### 🌐 **Dispositivos en Red**
+- Escanea y lista todos los dispositivos conectados a tu red
+- Muestra IP, MAC, fabricante y nombre del host
+- Estado de conexión en tiempo real
+
+#### 📈 **Visualización**
+- Gráfico en tiempo real del tráfico de red
+- Medición en KB/s
+- Historial de los últimos 5 minutos
+
+### 2. Controles Principales
+
+| Botón | Función |
+|-------|---------|
+| ▶️ | Iniciar monitoreo de tráfico |
+| ⏹️ | Detener monitoreo |
+| 🗑️ | Limpiar datos capturados |
+| 📄 | Abrir archivo CSV guardado |
+| 💾 | Exportar datos actuales a CSV |
+| 🔍 | Escanear dispositivos en red |
+
+### 3. Sistema de Filtros
+
+El campo de filtro permite buscar en tiempo real:
+- **Por IP**: `192.168.1.100`
+- **Por dominio**: `google.com`
+- **Por protocolo**: `TCP`, `UDP`, `ICMP`
+- **Por puerto**: `80`, `443`, `22`
+- **Por país**: `US`, `ES`, `MX`
+
+## 🔧 Características Técnicas
+
+### Protocolos Soportados
+- **TCP** - Protocolo de Control de Transmisión
+- **UDP** - Protocolo de Datagramas de Usuario
+- **ICMP** - Protocolo de Mensajes de Control de Internet
+- **ARP** - Protocolo de Resolución de Direcciones
+
+### Puertos Monitoreados como Inseguros
+- **Puerto 80** - HTTP (sin cifrado)
+- **Puerto 21** - FTP
+- **Puerto 23** - Telnet
+- **Puerto 25** - SMTP
+- **Puerto 110** - POP3
+
+### Capacidades de Análisis
+- Resolución de nombres de dominio
+- Identificación de fabricantes por MAC
+- Cálculo de tráfico en tiempo real
+- Detección de redes privadas vs públicas
+
+## 🛡️ Consideraciones de Seguridad
+
+⚠️ **IMPORTANTE**: Esta herramienta está diseñada para:
+- Análisis de tu propia red
+- Propósitos educativos y de investigación
+- Administración de sistemas legítima
+
+❌ **NO usar para**:
+- Interceptar tráfico sin autorización
+- Actividades ilegales o no autorizadas
+- Violación de la privacidad de terceros
+
+## 🐛 Solución de Problemas
+
+### Problemas Comunes
+
+**Error de permisos:**
+```
+Solution: Ejecutar como administrador/sudo
+Windows: Clic derecho → "Ejecutar como administrador"
+Linux/macOS: sudo python3 SPYNET_V3.py
 ```
 
-### Linux (CentOS/RHEL)
-```bash
-sudo yum install python3 python3-pip
-# O para versiones más nuevas:
-sudo dnf install python3 python3-pip
+**No se instalan las dependencias:**
 ```
+Solución manual:
+pip install scapy psutil matplotlib Pillow maxminddb
+```
+
+**No aparecen iconos:**
+```
+Verificar que existe la carpeta 'icons/' con todos los archivos PNG
+```
+
+**GeoIP no funciona:**
+```
+Descargar GeoLite2-City.mmdb y colocar en carpeta 'geoip/'
+```
+
+## 📊 Exportación de Datos
+
+Los datos se pueden exportar en formato CSV con las siguientes columnas:
+
+| Columna | Descripción |
+|---------|-------------|
+| Tiempo | Timestamp de la conexión |
+| País | Código de país de la IP origen |
+| Origen | Dirección IP de origen |
+| Destino | Dirección IP de destino |
+| Dominio | Nombre de dominio resuelto |
+| Protocolo | TCP/UDP/ICMP |
+| Puerto | Puerto de destino |
+| Tamaño | Tamaño del paquete en bytes |
+| Detalles | Información adicional |
+
+
+## 📝 Changelog
+
+### v3.0 - Edición Analista
+- ✅ Sistema de geolocalización IP
+- ✅ Filtros en tiempo real
+- ✅ Ventana de detalles de paquetes
+- ✅ Mejoras en la interfaz gráfica
+- ✅ Instalador automático mejorado
+
+### v2.1
+- ✅ Instalador automático de dependencias
+- ✅ Mejoras en la captura de paquetes
+
+### v2.0
+- ✅ Interfaz gráfica con pestañas
+- ✅ Escáner de red integrado
+- ✅ Gráficos en tiempo real
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 👨‍💻 Autor
+
+- **Tu Nombre** - *Desarrollador Principal* - [@ever](https://github.com/ever186)
+
+## 🙏 Agradecimientos
+
+- **Scapy Team** - Por la excelente librería de manipulación de paquetes
+- **MaxMind** - Por la base de datos GeoIP gratuita
+- **Python Community** - Por las increíbles librerías que hacen esto posible
 
 ---
 
-## 📦 Paso 2: Instalar Dependencias (Actualizacion de la V3.0)
-**⚠️con la version V3 ya existe un instaldor para las dependencias necesarias, en caso de que el programa no pueda instarlo realizar los siguientes pasos⚠️**
+⭐ **¡Si te gusta este proyecto, dale una estrella!** ⭐
 
-### Instalación Manual
-```bash
-# Dependencias principales
-pip install scapy psutil matplotlib Pillow
+## 🔗 Enlaces Útiles
 
-# tkinter viene incluido con Python en la mayoría de sistemas
-```
-
-### Verificar Instalación de tkinter
-```python
-# Ejecuta este código para verificar tkinter
-import tkinter as tk
-root = tk.Tk()
-root.title("Prueba tkinter")
-tk.Label(root, text="✅ tkinter funciona correctamente").pack()
-root.mainloop()
-```
+- [Documentación de Scapy](https://scapy.readthedocs.io/)
+- [GeoLite2 Database](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data)
+- [Python Official Website](https://www.python.org/)
 
 ---
 
-## 🔧 Paso 3: Configuración Especial por Sistema
-
-### Windows
-1. **Ejecutar como Administrador**:
-   - Abre CMD como administrador
-   - Navega a la carpeta del proyecto
-   - Ejecuta el programa
-
-2. **Firewall de Windows**:
-   - Puede aparecer una ventana de firewall
-   - Permite el acceso para Python
-
-### macOS
-```bash
-# Instalar dependencias adicionales para Scapy
-sudo pip3 install scapy
-
-# Dar permisos de red (puede requerir contraseña)
-sudo python3 Aplicacionen_Alpha_Final.py
-```
-
-### Linux
-```bash
-# Instalar dependencias del sistema
-sudo apt install python3-tk  # Para tkinter
-sudo apt install libpcap-dev  # Para Scapy
-
-# Dar permisos de red
-sudo setcap cap_net_raw,cap_net_admin+eip $(which python3)
-# O ejecutar como root:
-sudo python3 Aplicacionen_Alpha_Final.py
-```
-
----
-
-## 🚀 Paso 4: Ejecutar la Aplicación
-
-### Método 1: Línea de Comandos
-```bash
-# Navegar a la carpeta del proyecto
-cd /ruta/a/tu/proyecto
-
-# Ejecutar como administrador/root
-sudo python3 Aplicacionen_Alpha_Final.py
-```
-
-### Método 2: Crear Script de Inicio
-
-#### Windows (`iniciar.bat`)
-```batch
-@echo off
-echo Iniciando Analizador de Red...
-python Aplicacionen_Alpha_Final.py
-pause
-```
-
-#### macOS/Linux (`iniciar.sh`)
-```bash
-#!/bin/bash
-echo "Iniciando Analizador de Red..."
-sudo python3 Aplicacionen_Alpha_Final.py
-```
-
-Hacer ejecutable:
-```bash
-chmod +x iniciar.sh
-./iniciar.sh
-```
-
----
-
-## 🛠️ Solución de Problemas Comunes
-
-### ❌ Error: "ModuleNotFoundError: No module named 'tkinter'"
-**Windows/macOS**: Reinstala Python desde python.org
-**Linux**: 
-```bash
-sudo apt install python3-tk
-```
-
-### ❌ Error: "Permission denied" o problemas de red
-**Solución**: Ejecutar como administrador/root
-```bash
-# Linux/macOS
-sudo python3 Aplicacionen_Alpha_Final.py
-
-# Windows: Abrir terminal como administrador
-```
-
-### ❌ Error: "No module named 'scapy'"
-```bash
-pip install scapy
-# Si falla en Linux:
-sudo apt install python3-dev libpcap-dev
-pip install scapy
-```
-
-### ❌ La aplicación no captura tráfico
-1. Verificar permisos de administrador
-2. Desactivar VPN temporalmente
-3. Verificar firewall/antivirus
-4. Ejecutar en red activa (no modo avión)
-
-### ❌ El escaneo de red no encuentra dispositivos
-1. Verificar que estés en una red local
-2. Algunos routers bloquean escaneos ARP
-3. Probar con diferentes rangos de red
-
----
-
-## 📱 Paso 5: Uso de la Aplicación
-
-### Funciones Principales
-
-1. **📊 Análisis de Tráfico**
-   - Clic en "▶ Iniciar Análisis"
-   - Observa las conexiones en tiempo real
-   - Detén con "⏹ Detener"
-
-2. **🌐 Escaneo de Red**
-   - Ve a la pestaña "Dispositivos en Red"
-   - Clic en "🔍 Escanear Red"
-   - Espera a que termine el escaneo
-
-3. **💾 Exportar Datos**
-   - Clic en "💾 Exportar CSV"
-   - Se crea un archivo con timestamp
-   - Abre con Excel o cualquier editor CSV
-
-### Consejos de Uso
-- ⚡ Ejecuta siempre como administrador
-- 🔒 Algunas redes corporativas pueden bloquear escaneos
-- 📊 Los datos se almacenan solo en memoria hasta exportar
-- 🧹 Usa "Limpiar" para resetear la tabla
-
----
-
-## 🔐 Consideraciones de Seguridad
-
-### ⚠️ Importante
-- Esta herramienta requiere permisos elevados
-- Solo úsala en redes propias o con autorización
-- Algunos antivirus pueden detectarla como sospechosa
-- El escaneo de red puede ser detectado por administradores
-
-### 📋 Uso Ético
-- ✅ Redes propias o domésticas
-- ✅ Diagnóstico de problemas
-- ✅ Monitoreo autorizado
-- ❌ Redes ajenas sin permiso
-- ❌ Actividades maliciosas
-
----
-
-## 📞 Soporte y Contacto
-
-### Si tienes problemas:
-1. Verifica que Python esté correctamente instalado
-2. Confirma que todas las dependencias estén instaladas
-3. Ejecuta como administrador/root
-4. Revisa la sección de solución de problemas
-
-### Archivos Generados
-- `trafico_tabla_YYYYMMDD_HHMMSS.csv`: Exportaciones de datos
-- Logs de errores aparecen en la consola
-
----
-
-## 🎯 Resumen de Instalación Rápida
-
-```bash
-# 1. Instalar Python 3.8+
-# 2. Instalar dependencias
-pip install psutil scapy
-
-# 3. Ejecutar como administrador
-sudo python3 Aplicacionen_Alpha_Final.py
-```
-
-¡Listo! Ya tienes tu analizador de red funcionando. 🎉
+*Desarrollado con ❤️ para la comunidad de ciberseguridad*
