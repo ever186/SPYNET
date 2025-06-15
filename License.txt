@@ -1,0 +1,150 @@
+Licencia MIT
+
+Copyright (c) 2025 Proyecto SPYNET
+
+Por la presente se concede permiso, libre de cargos, a cualquier persona que obtenga 
+una copia de este software y de los archivos de documentación asociados (el "Software"), 
+a utilizar el Software sin restricción, incluyendo sin limitación los derechos a usar, 
+copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender copias del 
+Software, y a permitir a las personas a las que se les proporcione el Software a hacer 
+lo mismo, sujeto a las siguientes condiciones:
+
+El aviso de copyright anterior y este aviso de permiso se incluirán en todas las copias 
+o partes sustanciales del Software.
+
+EL SOFTWARE SE PROPORCIONA "COMO ESTÁ", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, 
+INCLUYENDO PERO NO LIMITADO A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO 
+PARTICULAR E INCUMPLIMIENTO. EN NINGÚN CASO LOS AUTORES O PROPIETARIOS DE LOS DERECHOS 
+DE AUTOR SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA 
+SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRO MOTIVO, DERIVADAS DE, FUERA DE 
+O EN CONEXIÓN CON EL SOFTWARE O SU USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.
+
+================================================================================
+TÉRMINOS Y CONDICIONES ADICIONALES PARA SPYNET V3.0
+================================================================================
+
+CLÁUSULA DE USO RESPONSABLE:
+
+Este software está diseñado para análisis legítimo de redes, administración de sistemas,
+propósitos educativos e investigación en ciberseguridad. Al utilizar este software, 
+usted acepta:
+
+1. USAR ÚNICAMENTE EN REDES DE SU PROPIEDAD O CON PERMISO EXPLÍCITO
+   - Solo monitorear su propia infraestructura de red
+   - Obtener autorización por escrito antes de analizar redes de terceros
+   - Respetar todas las leyes y regulaciones aplicables en su jurisdicción
+
+2. PROPÓSITOS EDUCATIVOS Y DE INVESTIGACIÓN
+   - Usar para aprender conceptos de seguridad de redes
+   - Realizar pruebas de penetración autorizadas
+   - Llevar a cabo investigación legítima de seguridad
+
+3. USOS PROHIBIDOS
+   NO puede usar este software para:
+   - Intrusión o vigilancia no autorizada de redes
+   - Interceptar comunicaciones privadas sin consentimiento
+   - Cualquier actividad ilegal o violación de leyes de privacidad
+   - Espionaje corporativo o recopilación de inteligencia competitiva
+   - Acoso, stalking o monitoreo malicioso
+
+4. CUMPLIMIENTO DE LEYES
+   - Los usuarios son únicamente responsables del cumplimiento de las leyes
+     locales, estatales, nacionales e internacionales
+   - Esto incluye pero no se limita a: Ley de Fraude y Abuso Informático,
+     RGPD, LOPD, y otras regulaciones de privacidad
+   - Los autores no son responsables del mal uso de este software
+
+5. SIN GARANTÍA DE SEGURIDAD
+   - Este software se proporciona con fines educativos
+   - No hay garantía de evasión de detección o seguridad
+   - Los usuarios asumen todos los riesgos asociados con el monitoreo de red
+
+6. RESPONSABILIDAD DE DATOS
+   - Los usuarios son responsables de asegurar cualquier dato capturado
+   - Seguir políticas apropiadas de retención y destrucción de datos
+   - Proteger información sensible descubierta durante el análisis
+
+DESCARGO DE RESPONSABILIDAD:
+Los autores y contribuyentes de SPYNET V3.0 renuncian a toda responsabilidad por
+cualquier mal uso, uso ilegal o daños resultantes del uso de este software.
+Esta herramienta está destinada únicamente para propósitos legítimos.
+
+Si no está de acuerdo con estos términos, no está autorizado a usar este software.
+
+================================================================================
+DEPENDENCIAS Y LICENCIAS DE TERCEROS
+================================================================================
+
+Este software incorpora las siguientes librerías de terceros, cada una con 
+sus propios términos de licencia:
+
+- Scapy: Licencia Pública General GNU v2.0
+- Matplotlib: Licencia Matplotlib (compatible con BSD)
+- Pillow (PIL): Aviso de Permiso Histórico y Descargo de Responsabilidad (HPND)
+- MaxMindDB: Licencia Apache 2.0
+- PSUtil: Licencia BSD de 3 Cláusulas
+- Tkinter: Licencia de la Fundación de Software Python
+
+Los usuarios deben cumplir con todas las licencias de terceros aplicables.
+
+================================================================================
+ATRIBUCIÓN
+================================================================================
+
+Si utiliza este software en investigación académica, por favor cite:
+
+SPYNET V3.0 - Herramienta de Análisis de Tráfico de Red
+Disponible en: https://github.com/ever186/spynet-v3
+Año: 2025
+
+================================================================================
+CONTACTO Y REPORTES
+================================================================================
+
+Para preguntas sobre licencias o para reportar mal uso:
+- Contacto: everleiva186@gmail.com
+
+Para vulnerabilidades de seguridad:
+- Por favor reporte de manera responsable a través de canales privados primero
+- Permita tiempo razonable para correcciones antes de divulgación pública
+
+================================================================================
+JURISDICCIÓN Y LEGISLACIÓN APLICABLE
+================================================================================
+
+Esta licencia se rige por las leyes de Colombia. Cualquier disputa 
+relacionada con este software será resuelta en los tribunales competentes.
+
+NOTA ESPECIAL PARA USUARIOS EN ESPAÑA:
+- Cumplir con la Ley Orgánica de Protección de Datos (LOPD)
+- Respetar la legislación sobre interceptación de comunicaciones
+- Considerar las normativas del CCN-CERT para herramientas de ciberseguridad
+
+NOTA ESPECIAL PARA USUARIOS EN LATINOAMÉRICA:
+- Respetar las leyes locales de protección de datos personales
+- Cumplir con regulaciones de telecomunicaciones de cada país
+- Considerar las normativas específicas de ciberseguridad gubernamental
+
+================================================================================
+LIMITACIONES ADICIONALES
+================================================================================
+
+1. ENTORNOS CORPORATIVOS
+   - Obtener aprobación del departamento de TI antes del uso
+   - Documentar el uso según políticas de seguridad corporativa
+   - No usar en redes de producción sin autorización explícita
+
+2. INSTITUCIONES EDUCATIVAS
+   - Uso permitido para cursos de ciberseguridad y redes
+   - Supervisión requerida por instructor calificado
+   - Limitado a entornos de laboratorio controlados
+
+3. INVESTIGACIÓN ACADÉMICA
+   - Aprobación del comité de ética requerida cuando aplique
+   - Documentación adecuada de metodología y hallazgos
+   - Protección de datos sensibles según estándares académicos
+
+================================================================================
+
+Versión: 3.0
+Última Actualización: Junio 2025
