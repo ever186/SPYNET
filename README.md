@@ -217,11 +217,11 @@ Los datos se pueden exportar en formato CSV con las siguientes columnas:
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE.txt` para más detalles.
 
 ## 👨‍💻 Autor
 
-- **Tu Nombre** - *Desarrollador Principal* - [@ever](https://github.com/ever186)
+- **Ever Leiva** - *Desarrollador Principal* - [@ever](https://github.com/ever186)
 
 ## 🙏 Agradecimientos
 
